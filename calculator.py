@@ -28,5 +28,5 @@ try:
 except ValueError:
     print("Please correct number")
 except ZeroDivisionError:
-    print("Zero can't")
+    print("Zero can't...")
 
