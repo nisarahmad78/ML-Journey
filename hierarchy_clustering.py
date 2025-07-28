@@ -22,3 +22,16 @@ plt.scatter(x,y,c=label,cmap='viridis')
 plt.show()
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
