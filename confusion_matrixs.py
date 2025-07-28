@@ -8,6 +8,9 @@
 # display_prediction = ConfusionMatrixDisplay(confusion_matrix=model, display_labels=[False,True])
 # display_prediction.plot()
 # plt.show()
+'''
+
+
 
 import numpy as np
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
@@ -39,5 +42,41 @@ display = metrics.ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=[Fa
 display.plot()
 plt.title("Confusion Matrix (True/False)")
 plt.show()
+'''
+
+'''
+#Accuracy Score
+import numpy as np
+from sklearn import metrics
+actual_data = np.random.binomial(1,.9, size=1000)
+prediction = np.random.binomial(1,.9, size=1000)
+accuracy_score = metrics.accuracy_score(actual_data,prediction)
+print(accuracy_score)
+
+
+#precision Score
+import numpy as np
+from sklearn import metrics
+actual_data = np.random.binomial(1,.9, size=1000)
+prediction = np.random.binomial(1,.9, size=1000)
+accuracy_precision = metrics.recall_score(actual_data,prediction)
+print(accuracy_precision)
+'''
+
+#specificity
+import numpy as np
+from sklearn import metrics
+actual_data = np.random.binomial(1,.9, size=1000)
+prediction = np.random.binomial(1,.9, size=1000)
+specificity = metrics.recall_score(actual_data,prediction, pos_label=0)
+print(specificity)
+
+#f1 score
+import numpy as np
+from sklearn import metrics
+actual_data = np.random.binomial(1,.9, size=1000)
+prediction = np.random.binomial(1,.9, size=1000)
+f1_score = metrics.f1_score(actual_data,prediction)
+print(f1_score)
 
 
